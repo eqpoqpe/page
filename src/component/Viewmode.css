@@ -1,0 +1,7 @@
+.viewmode {
+    background-color: rgb(39, 38, 38);
+    width: 100%;
+    height: 10px;
+    position: fixed;
+    bottom: 0px;
+}

@@ -1,0 +1,12 @@
+.header {
+    background-color: yellow;
+    width: 100%;
+    height: 20px;
+}
+
+@media screen and (max-width: 300px) {
+    .header {
+        width: 100%;
+        height: 60px;
+    }
+}
