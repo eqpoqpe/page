@@ -1,16 +1,17 @@
-import './App.css';
-import quq from "./quq-pink.svg";
-import Viewmode from './component/Viewmode';
-import Header from './component/Header';
+import "./App.css";
+import Viewmode from "./component/Viewmode";
+import Header from "./component/Header";
+import Card from "./component/Card";
+import { useState } from "react";
 
-function App() {
+export default function App() {
+  const [path, setPath] = useState(0);
 
   return (
-    <>
+    <div>
       <Viewmode />
-      <Header />
-    </>
+      <Header ready={setPath} />
+      <Card ready={path} />
+    </div>
   );
 }
-
-export default App;

@@ -1,0 +1,17 @@
+.card-front {
+    max-width: 800px;
+    min-width: 600px;
+    min-height: 300px;
+    margin: 20px auto 0px auto;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 400px) {
+    .card-front {
+        width: 100%;
+        max-width: none;
+        min-width: 10px;
+        min-height: 370px;
+        margin: 0px 0px 0px 0px;
+    }
+}

@@ -3,7 +3,11 @@ import "./Viewmode.css";
 function Viewmode(props) {
   return (
     <>
-      <div className="viewmode"></div>
+      <div className="viewmode box">
+        <img></img>
+        <div></div>
+        <img></img>
+      </div>
     </>
   )
 }
