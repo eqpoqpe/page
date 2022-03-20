@@ -1,10 +1,10 @@
 # QAQ
 QAQ: To build a page with Reactjs and GitHub Page
 
-# Installation && Build
+# Deployment
 ```bash
 npm install
 ```
 ```bash
-npm start
+npm build
 ```
