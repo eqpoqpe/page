@@ -1,5 +1,5 @@
-# QAQ
-QAQ: To build a page with Reactjs and GitHub Page
+# Page
+To build a page with React
 
 ## Deployment
 ```bash
