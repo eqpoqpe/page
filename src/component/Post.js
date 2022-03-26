@@ -1,5 +1,4 @@
 import "./Post.css";
-// import { useState, useEffect } from "react";
 import { isKeyExists } from "../util/checking";
 import { Preview } from "../util/content";
 import quq from "./quq-pink.svg";
@@ -7,16 +6,21 @@ import quq from "./quq-pink.svg";
 export default function Post(props) {
   return (
     <div className="post-front">
-      <div className="post">
-        {/* <div className="min-profile">
-          <img src={quq} className="profile-picture"></img>
-          <div className="display-username">
-            {((item) => isKeyExists("author", item) ? item.author : "Unkonwn")(props.item)}
-          </div>
-          <div className="display-tagfrom">{props.item.type}</div>
-        </div> */}
-        <div className="title">{props.item.title}</div>
-        <div className="preview">{Preview(props.item.content)}</div>
+      {[...props.items].map((context, index) => {
+        return previewPost(context, index);
+      })}
+    </div>
+  );
+};
+
+const previewPost = (c, k) => {
+  return (
+    <div key={k} className="post">
+      <div>
+      </div>
+      <div>
+        <h2 className="title">{c.title}</h2>
+        <p className="preview">{c.context}</p>
       </div>
     </div>
   );

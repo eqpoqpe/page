@@ -1,5 +1,5 @@
 import "./Card.css";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer, useMemo } from "react";
 import { isKeyExists } from "../util/checking";
 import Post from "./Post";
 
@@ -7,22 +7,31 @@ function pullData(setter) {
 }
 
 export default function Card(props) {
-  const [posts, setPosts] = useState([]);
+  const [data, setData] = useState([]);
+  // const path = useMemo();
 
-  // useEffect(() => {
-  //   fetch("http://192.168.1.101:8080/display")
-  //     .then((response) => response.json())
-  //     .then((result) => {
-  //       setPosts(result.items);
-  //     });
-  // }, [props.ready]);
+  useEffect(() => {
+    fetch(`https://eqpo.ml${props.ready}/display.json`)
+      .then((response) => response.json())
+      .then(
+        (result) => { setData(result.display.items); },
+        (error) => { setData([]); }
+      );
+  }, [props.ready]);
 
   return (
     <>
       <div className="card-front front">
-        {/* {posts.map((v, i)=> <Post key={i} item={v}/>)} */}
-        {props.ready}
+        <Post items={data}/>
       </div>
     </>
   );
 };
+
+function Emp() {
+  return (
+    <div>
+      <h1>Loading</h1>
+    </div>
+  );
+}

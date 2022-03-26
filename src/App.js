@@ -2,16 +2,16 @@ import "./App.css";
 import Viewmode from "./component/Viewmode";
 import Header from "./component/Header";
 import Card from "./component/Card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App() {
-  const [path, setPath] = useState(0);
+  const [nav, setNav] = useState(["eqpo", ""]);
 
   return (
     <div>
       <Viewmode />
-      <Header ready={setPath} />
-      <Card ready={path} />
+      <Header ready={setNav} topics={nav[0]} />
+      <Card ready={nav[1]} />
     </div>
   );
 }

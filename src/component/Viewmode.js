@@ -1,15 +1,15 @@
 import "./Viewmode.css";
+import quq from "./quq-pink.svg";
+import github from "./iconmonstr/github-1.svg";
 
-function Viewmode(props) {
+export default function Viewmode(props) {
   return (
     <>
       <div className="viewmode box">
-        <img></img>
+        <img src={quq} className="logo"></img>
         <div></div>
-        <img></img>
+        <img src={github} className="logo"></img>
       </div>
     </>
   )
-}
-
-export default Viewmode;
+};

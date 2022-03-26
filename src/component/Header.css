@@ -1,6 +1,6 @@
 .header {
-    background-color: rgb(206, 255, 160);
-    border-bottom: 1px solid black;
+    background-color: rgb(37, 37, 37);
+    /* border-bottom: 1px solid pink; */
     display: block;
     width: 100%;
     height: auto;
@@ -43,7 +43,7 @@
 
 .selector {
     display: block;
-    width: 100px;
+    width: 300px;
     -webkit-transition: height 700ms;
     transition: height 700ms;
 }
@@ -66,15 +66,16 @@
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
     background-image:
-        linear-gradient(to right, rgba(39, 36, 36, 0), rgba(39, 36, 36, 0)),
+        linear-gradient(to right, rgb(20, 20, 20), rgb(20, 20, 20)),
         linear-gradient(90deg, #b88bec, #5087f5);
     border-radius: 15px;
     color: white;
-    padding: 2px 10px 3px 10px;
+    padding: 0px 7px 2px 7px;
     font-family: 'VT323', monospace;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     margin: 0px 5px 0px 5px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 412px) {
@@ -84,10 +85,10 @@
 
     .menu-symbol {
         display: block;
-        background-color: rgb(41, 41, 41);
+        background-color: pink;
         background-clip: content-box;
-        border-top: 5px solid rgb(41, 41, 41);
-        border-bottom: 5px solid rgb(41, 41, 41);
+        border-top: 5px solid pink;
+        border-bottom: 5px solid pink;
         width: 35px;
         height: 6.5px;
         padding-left: 0px;
@@ -123,20 +124,24 @@
         visibility: visible;
     }
 
-    .eu > .selector-front > div {
-        color: black;
-        transition: all 700ms;
+    .eu > .selector-front > div.selector-stuff {
+        color: rgb(255, 255, 255);
+        font-size: 23px;
+        transition:
+            color 900ms,
+            font-size 400ms;
     }
 
     .ru {
         height: 0px;
-        transition: all 700ms;
+        transition: all 600ms;
         /* animation: growUp 700ms ease-in-out forwards;
         transform-origin: top center; */
     }
 
-    .ru > .selector-front > div {
+    .ru > .selector-front > div.selector-stuff {
         color: rgba(0, 0, 0, 0);
+        font-size: 2px;
         transition: all 300ms;
         visibility: hidden;
     }
